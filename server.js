@@ -25,7 +25,7 @@ app.set("views", "views");
 app.set("view engine", "ejs");
 
 // 4 Routing code
-app.post("/create-item",(req,res) => {
+app.post("/create-item",(req, res) => {
     // TODO: code with db here
 });
 

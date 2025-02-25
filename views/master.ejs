@@ -1,1 +1,243 @@
-<div>HELLO WORLD YOUR ARE IN MASTERS!</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/master/main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"/>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <div class="frame">
+        <div class="main_frame">
+            <!-- left frame -->
+            <div class="left_frame">
+                <div class="left_1">
+                    <div left_1-1>
+                        <img src="images/profile.png" width="156px" height="142px" alt="">
+                    </div>
+                    <div left_1-2><%=user.name%></div>
+                    <div left_1-3><%=user.profession%></div>
+                    <div class="left-icons">
+                        <a class="link_herf" href="">
+                            <div class="icon">
+                                <img src="icon/Facebook.svg" class="icon-1"/>
+                            </div>
+                        </a>
+                        <a class="link_herf" href="">
+                            <div class="icon">
+                                <img src="icon/Instagram.svg" class="icon-1"/>
+                            </div>
+                        </a>
+                        <a class="link_herf" href="">
+                            <div class="icon">
+                                <img src="icon/Linkeding.svg" class="icon-1"/>
+                            </div>
+                        </a>
+                        <a class="link_herf" href="">
+                            <div class="icon">
+                                <img src="icon/Twitter.svg" class="icon-1"/>
+                            </div>
+                        </a>
+                        <a class="link_herf" href="">
+                            <div class="icon">
+                                <img src="icon/Youtube.svg" class="icon-1"/>
+                            </div>
+                        </a>
+                        <a class="link_herf" href="">
+                            <div class="icon">
+                                <img src="icon/Dribbble.svg" class="icon-1"/>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="marginer"></div>
+                <div class="left_2">
+                    <div class="left_2-1">
+                        <div class="left_2-1-1"><div class="left_2-1-1a">Age</div></div>
+                        <div class="left_2-1-2"><%=user.age%></div>
+                    </div>
+                    <div class="left_2-1">
+                        <div class="left_2-1-1"><div class="left_2-1-1a">Residence</div></div>
+                        <div class="left_2-1-2"><%=user.residence%></div>
+                    </div>
+                    <div class="left_2-1">
+                        <div class="left_2-1-1"><div class="left_2-1-1a">Freelance</div></div>
+                        <div class="left_2-1-2">Available</div>
+                    </div>
+                    <div class="left_2-1">
+                        <div class="left_2-1-1"><div class="left_2-1-1a">Adress</div></div>
+                        <div class="left_2-1-2"><%=user.address%></div>
+                    </div>
+                </div>
+                <div class="marginer"></div>
+                <div class="left_3">
+                    <div class="left_3-title">Languages</div>
+                    <div class="left_3-languages">
+                        <span class="language-name"><%=user.language[0]%></span>
+                        <span class="language-percentage">100%</span>
+                    </div>
+                    <div class="left-3-parcentage">
+                        <div class="left-3-line" style="margin-right: 0px;"></div>
+                    </div> 
+                    <div class="left_3-languages">
+                        <span><%=user.language[1]%></span> 
+                        <span>100%</span>
+                    </div>
+                    <div class="left-3-parcentage">
+                        <div class="left-3-line" style="margin-right: 0px;"></div>
+                    </div>
+                    <div class="left_3-languages">
+                        <span><%=user.language[2]%></span>
+                        <span>80%</span>
+                    </div>
+                    <div class="left-3-parcentage">
+                        <div class="left-3-line" style="width: 80%; margin-right: 40px;"></div>
+                    </div>
+                </div>
+                <div class="marginer"></div>
+                <div class="left_4">
+                    <div class="left_3-title">Skills</div>
+                    <div class="left_3-languages">
+                        <span class="skills-name"><%=user.skills[0]%></span>
+                        <span class="skills-percentage">100%</span>
+                    </div>
+                    <div class="left-3-parcentage">
+                        <div class="left-3-line" style="margin-right: 0px;"></div>
+                    </div> 
+                    <div class="left_3-languages">
+                        <span class="skills-name"><%=user.skills[1]%></span> 
+                        <span class="skills-percentage">100%</span>
+                    </div>
+                    <div class="left-3-parcentage">
+                        <div class="left-3-line" style="margin-right: 0px;"></div>
+                    </div>
+                    <div class="left_3-languages">
+                        <span class="language-name"><%=user.skills[2]%></span>
+                        <span class="skills-percentage">80%</span>
+                    </div>
+                    <div class="left-3-parcentage">
+                        <div class="left-3-line" style="width: 80%; margin-right: 40px;"></div>
+                    </div>
+                    <div class="left_3-languages">
+                        <span class="skills-name"><%=user.skills[3]%></span>
+                        <span class="skills-name">80%</span>
+                    </div>
+                    <div class="left-3-parcentage">
+                        <div class="left-3-line" style="width: 80%; margin-right: 40px;"></div>
+                    </div>
+                    <div class="left_3-languages">
+                        <span class="skills-name"><%=user.skills[4]%></span>
+                        <span class="skills-percentage">80%</span>
+                    </div>
+                    <div class="left-3-parcentage">
+                        <div class="left-3-line" style="width: 80%; margin-right: 40px;"></div>
+                    </div>
+                </div>
+                <div class="marginer"></div>
+                <div class="left_5">
+                    <div class="left_3-title">Extra Skills</div>
+                    <div class="left_3-languages">
+                        <div class="extra_skills-icon"><img src="btn_icon/extra_skills-icons.svg" alt=""></div>
+                        <div class="extra_skills-name"><%=user.extra_skills[0]%></div>
+                    </div> 
+                    <div class="left_3-languages">
+                        <span class="extra_skills-icon"><img src="btn_icon/extra_skills-icons.svg" alt=""></span>
+                        <span class="extra_skills-name"><%=user.extra_skills[1]%></span> 
+                    </div>
+                    <div class="left_3-languages">
+                        <span class="extra_skills-icon"><img src="btn_icon/extra_skills-icons.svg" alt=""></span>
+                        <span class="extra_skills-name"><%=user.extra_skills[2]%></span>
+                    </div>
+                    <div class="left_3-languages">
+                        <span class="extra_skills-icon"><img src="btn_icon/extra_skills-icons.svg" alt=""></span>
+                        <span class="extra_skills-name"><%=user.extra_skills[3]%></span>
+                    </div>
+                </div>
+                <div class="marginer"></div>
+                </div>
+                <!-- end left frame -->
+                <!-- midd frame -->
+                <div class="midd_frame">
+                    <div class="doctor-info">
+                        <div class="doctor-title"> 
+                            <h1 class="doctor-workplace">Doctor neurologists in OHSU Hospital</h1>
+                            <div class="doctor-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus libero reprehenderit ea voluptatibus consequuntur iusto nisi. Maxime corrupti accusantium unde vero vitae quia delectus rem, recusandae itaque eveniet et dignissimos?</div> 
+                            <div class="doctor-contact">
+                                <span class="doctor-contact-click">HERE ME</span>
+                            </div>
+                        </div>
+                        <div class="doctor-image">
+                            <img src="images/Your Image 1.png" alt="Doctor Image">
+                        </div>
+                        <!-- <div class="container">
+                            <div class="doctor-icon"></div>
+                            <div class="doctor-icon" id="icon1"><img src="images/Ellipse 12.png" alt="a"></div>
+                            <div class="doctor-icon" id="icon2"><img src="images/Ellipse 15.png" alt="a"></div>
+                            <div class="doctor-icon" id="icon2"><img src="images/Ellipse 15.png" alt="a"></div>
+                            <div class="doctor-icon" id="icon3"><img src="images/Polygon 1.png" alt="a"></div>
+                            <div class="doctor-icon" id="icon4"><img src="images/Rectangle 51.png" alt="a"></div>
+                            <div class="doctor-icon" id="icon5"><img src="images/Rectangle 52.png" alt="a"></div>
+                        </div> -->
+                    </div>
+                    <div class="additional-info">
+                        <div>
+                            <h1 style="margin-left: 400px;">My Services</h1>
+                            <p class="additional-info-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi recusandae cum    possimus voluptatem debitis sequi commodi accusantium corporis et, quis reiciendis pariatur neque culpa modi rem  atque, ipsum voluptates incidunt?
+                            </p>
+                            <div class="box-6">
+                                <div class="box-6-1">
+                                    <div><img src="menu_icon/Icons_coding.png" alt=""></div>
+                                    <div>Web Development</div>
+                                    <div> Blog, E-commerce</div>
+                                </div>
+                                <div class="box-6-1">
+                                    <div><img src="menu_icon/Icons_illustration.png" alt=""></div>
+                                    <div>UI/UX Design</div>
+                                    <div>Mobile App, Website Design</div>
+                                </div>
+                                <div class="box-6-1">
+                                    <div><img src="menu_icon/Icons_Microphone.png" alt=""></div>
+                                    <div>Sound Design</div>
+                                    <div>Voice Over, Beat Making</div>
+                                </div>
+                                <div class="box-6-1">
+                                    <div><img src="menu_icon/Icons_game-development.png" alt=""></div>
+                                    <div>Game Design </div>
+                                    <div>Character Design, Props&Objects</div>
+                                </div>
+                                <div class="box-6-1">
+                                    <div><img src="menu_icon/Icons_Photographer.png" alt=""></div>
+                                    <div>Photography</div>
+                                    <div>Portrait, Product Photography</div>
+                                </div>
+                                <div class="box-6-1">
+                                    <div><img src="" alt=""></div>
+                                    <div>Advertising</div>
+                                    <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. ipsum dolor sit amet consectetur, adipisicing .</div>
+                                    <div class="box-6-1-order"><a href="http://localhost:3000/master/">ORDER NOW></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end midd frame -->
+                <!-- right frame -->
+                <div class="right_frame">
+                    <div class="right_frame-1"><img src="box_images/Vector.png" alt=""></div>
+                    <div class="right_frame-2">
+                        <div class="right_frame-2-1"><img src="box_images/Home.png" alt=""></div>
+                        <div class="right_frame-2-2"><img src="box_images/Service.png" alt=""></div>
+                        <div class="right_frame-2-2"><img src="box_images/Cv.png" alt=""></div>
+                        <div class="right_frame-2-2"><img src="box_images/Portfolio.png" alt=""></div>
+                        <div class="right_frame-2-2"><img src="box_images/Blog.png" alt=""></div>
+                        <div class="right_frame-2-2"><img src="box_images/Contact.png" alt=""></div>
+                    </div>
+                </div>
+                <!-- end right frame -->
+            </div>
+        </div>
+    </body>
+    </html>
