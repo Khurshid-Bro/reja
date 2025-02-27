@@ -224,3 +224,30 @@ function countLetter(harf, jumla) {
 }
 console.log(countLetter("n", "engineer"));
 
+// B-TASK: 
+
+// Shunday function tuzing, u 1ta string parametrga ega bolsin, hamda osha stringda qatnashgan raqamlarni sonini bizga return qilsin.
+// MASALAN countDigits("ad2a54y79wet0sfgb9") 7ni return qiladi.
+function countDigits(mit) {
+    let count = 0;
+    for (let idx = 0; idx < mit.length; idx++) {
+        if (mit[idx] >= "0" && mit[idx] <= "9") {
+            count++;
+        }
+    }
+    return count;
+}
+
+console.log(countDigits("ad2a54y79wet0sfgb9"));
+
+//------------------------------------------
+
+function countDigits(satr) {
+    const raqamlar = Array.from(satr).filter(belgi => belgi >= '0' && belgi <= '9');
+    return raqamlar.length;
+}
+
+
+const natija = countDigits("ad2a54y79wet0sfgbhjh91234564");
+console.log(natija);
+
