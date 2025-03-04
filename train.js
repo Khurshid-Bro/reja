@@ -296,10 +296,10 @@ class Shop {
     }
 }
 
-// Misol uchun foydalanish:
+
 const shop = new Shop(4, 5, 2);
-shop.qoldiq(); // Hozir 20:40da 4ta non, 5ta lagmon va 2ta cola mavjud!
+shop.qoldiq(); 
 shop.sotish('non', 3);
 shop.qabul('cola', 4);
-shop.qoldiq(); // Hozir 20:50da 1ta non, 5ta lagmon va 6ta cola mavjud!
+shop.qoldiq(); 
 
