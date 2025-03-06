@@ -219,37 +219,37 @@
 // const natija = countLetter('e', 'engineer');
 // console.log(natija);
 
-function countLetter(harf, jumla) {
-    return jumla.split("").filter((a) => a === harf).length;
-}
-console.log(countLetter("n", "engineer"));
+// function countLetter(harf, jumla) {
+//     return jumla.split("").filter((a) => a === harf).length;
+// }
+// console.log(countLetter("n", "engineer"));
 
 // B-TASK: 
 
 // Shunday function tuzing, u 1ta string parametrga ega bolsin, hamda osha stringda qatnashgan raqamlarni sonini bizga return qilsin.
 // MASALAN countDigits("ad2a54y79wet0sfgb9") 7ni return qiladi.
-function countDigits(mit) {
-    let count = 0;
-    for (let idx = 0; idx < mit.length; idx++) {
-        if (mit[idx] >= "0" && mit[idx] <= "9") {
-            count++;
-        }
-    }
-    return count;
-}
+// function countDigits(mit) {
+//     let count = 0;
+//     for (let idx = 0; idx < mit.length; idx++) {
+//         if (mit[idx] >= "0" && mit[idx] <= "9") {
+//             count++;
+//         }
+//     }
+//     return count;
+// }
 
-console.log(countDigits("ad2a54y79wet0sfgb9"));
+// console.log(countDigits("ad2a54y79wet0sfgb9"));
 
-//------------------------------------------
+// //------------------------------------------
 
-function countDigits(satr) {
-    const raqamlar = Array.from(satr).filter(belgi => belgi >= '0' && belgi <= '9');
-    return raqamlar.length;
-}
+// function countDigits(satr) {
+//     const raqamlar = Array.from(satr).filter(belgi => belgi >= '0' && belgi <= '9');
+//     return raqamlar.length;
+// }
 
 
-const natija = countDigits("ad2a54y79wet0sfgbhjh91234564");
-console.log(natija);
+// const natija = countDigits("ad2a54y79wet0sfgbhjh91234564");
+// console.log(natija);
 
 /*
 MITASK-C 
@@ -260,46 +260,49 @@ MASALAN: const shop = new Shop(4, 5, 2); shop.qoldiq() return hozir 20:40da 4ta 
  */
 
 class Shop {
-    constructor(non, lagmon, cola) {
+    constructor(non, choy, suv) {
         this.non = non;
-        this.lagmon = lagmon;
-        this.cola = cola;
+        this.choy = choy;
+        this.suv = suv;
     }
-    
+
     qoldiq() {
         const vaqt = new Date().toLocaleTimeString();
-        console.log(`Hozir ${vaqt}da ${this.non}ta non, ${this.lagmon}ta lagmon va ${this.cola}ta cola mavjud!`);
+        console.log(
+            `${vaqt} da sizda hozir ${this.non} ta non, ${this.choy} ta choy, ${this.suv} ta suv bor.`
+        );
     }
-    
-    sotish(mahsulot, miqdor) {
-        if (this[mahsulot] !== undefined) {
-            if (this[mahsulot] >= miqdor) {
-                this[mahsulot] -= miqdor;
-                const vaqt = new Date().toLocaleTimeString();
-                console.log(`Hozir ${vaqt}da ${miqdor}ta ${mahsulot} sotildi.`);
-            } else {
-                console.log(`Kechirasiz, yetarli ${mahsulot} mavjud emas.`);
-            }
+
+    sotish(nomi, miqdor) {
+        const vaqt = new Date().toLocaleTimeString();
+
+        if (this[nomi] === undefined) {
+            console.log(`${vaqt} da bunday mahsulot yo'q.`);
+        } else if (this[nomi] < miqdor) {
+            console.log(
+                `${vaqt} da sizda ${miqdor} ta ${nomi} mahsulot yo'q, faqat ${this[nomi]} ta ${nomi} mavjud.`
+            );
         } else {
-            console.log(`Kechirasiz, ${mahsulot} do'konimizda mavjud emas.`);
+            this[nomi] -= miqdor;
+            console.log(`${vaqt} da ${miqdor} ta ${nomi} sotildi.`);
         }
     }
-    
-    qabul(mahsulot, miqdor) {
-        if (this[mahsulot] !== undefined) {
-            this[mahsulot] += miqdor;
-            const vaqt = new Date().toLocaleTimeString();
-            console.log(`Hozir ${vaqt}da ${miqdor}ta ${mahsulot} qabul qilindi.`);
+
+    qabul(nomi, miqdor) {
+        const vaqt = new Date().toLocaleTimeString();
+        if (this[nomi] === undefined) {
+            console.log(`${vaqt} da bunday mahsulot yo'q.`);
         } else {
-            console.log(`Kechirasiz, ${mahsulot} do'konimizda mavjud emas.`);
+            this[nomi] += miqdor;
+            console.log(`${vaqt} da siz ${miqdor} ta ${nomi} qabul qildingiz.`);
         }
     }
 }
 
-
 const shop = new Shop(4, 5, 2);
-shop.qoldiq(); 
+shop.qoldiq();
 shop.sotish('non', 3);
-shop.qabul('cola', 4);
-shop.qoldiq(); 
+shop.qabul('suv', 1);
+shop.qoldiq();
+
 
