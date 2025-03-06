@@ -305,4 +305,19 @@ shop.sotish('non', 3);
 shop.qabul('suv', 1);
 shop.qoldiq();
 
+// D-TASK: 
+
+/* Shunday function tuzing, u 2ta string parametr ega bolsin, hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
+MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true; */
+
+function checkContent(str1, str2) {
+    if(str1.length !== str2.length) {
+        return false;
+    }
+    const normalize = str => str.split('').sort().join('');
+    return normalize(str1) === normalize(str2);
+}
+
+console.log(checkContent("ajoyib", "ibjoya"));
+console.log(checkContent("ajoyib", "kun"));
 
