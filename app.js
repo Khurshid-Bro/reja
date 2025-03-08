@@ -51,7 +51,7 @@ app.post("/delete-item", (req, res) => {
         if(req.body.delete_all) {
             db.collection("plans").deleteMany(function() {
                 res.json({ state: "hamma rejalar ochirildi"})
-            })
+            });
         }
     });
     
