@@ -2,9 +2,9 @@ const http = require("http");
 const mongodb = require("mongodb");
 
 // npm i mongodb - mongodbni yuklash
-let db;
+// let db;
 const connectionString = 
-"mongodb+srv://razakovkh6774:6ClG8vYh4Du1mMyO@cluster0.48p1o.mongodb.net/Reja?retryWrites=true&w=majority&appName=Cluster0"
+"mongodb+srv://razakovkh6774:6ClG8vYh4Du1mMyO@cluster0.48p1o.mongodb.net/Reja?retryWrites=true&w=majority&appName=Cluster0";
 
 mongodb.connect(
     connectionString, 
@@ -13,7 +13,7 @@ mongodb.connect(
         useUniedTopology: true,
     }, 
     (err, client) => {
-        if(err) console.log("ERROR on connection MongoDB");
+        if(err) console.log("Error on connection MongoDB");
         else {
             console.log("MongoDB connection succeed");
             module.exports = client;

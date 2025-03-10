@@ -21,10 +21,10 @@ function itemTemplate(item) {
 
 let createField = document.getElementById("create-field");
 
-document.getElementById("create-form").addEventListener("submit", function (e) {
-    e.preventDefault();
+document.getElementById("create-form").addEventListener("submit", function (event) {
+    e.preventDefault(); //STOP Traditional API
 
-
+    //Rest API
     axios
         .post("/create-item",{reja: createField.value})
         .then((response) => {
@@ -45,7 +45,7 @@ document.addEventListener("click", function (event) {
     if(event.target.classList.contains("delete-me")) {
         if(confirm("Aniq o'chirmoqchimisiz")) {
             axios
-            .post("/delete-item", { id: event.target.getAttribute("data-id")}) 
+            .post("/delete-item", { id: event.target.getAttribute("data-id") }) 
             .then((respose) => {
                 console.log(respose.data);
                 event.target.parentElement.parentElement.remove();

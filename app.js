@@ -1,20 +1,25 @@
 console.log("Web Serverni boshlash");
 const express = require("express");
-const res = require("express/lib/response");
+// const res = require("express/lib/response");
 const app = express();
 
 //MongoDB chaqirish
+
 const db = require("./server").db();
+// const db = client.db();
 const mongodb = require("mongodb");
 
 // 1 kirish code
 app.use(express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-// 2 Session
-// 3 Views code
+
+// 2 Session code - AUTHENTICATION (Login, Signup)
+
+// 3 Views code - (B)SSR - Backend ishida HTML qurib yuborish. SPI - Backend and Frontent alohida ishlaydi.
 app.set("views", "views");
 app.set("view engine", "ejs");
+
 // 4 Routing code
 app.post("/create-item", (req, res) => {
     console.log("user entered /create-item");
@@ -56,17 +61,18 @@ app.post("/delete-item", (req, res) => {
     });
     
     app.get("/", function (req, res) {
-        console.log("user entered /");
+        console.log("user entered to /");
         db.collection("plans")
         .find()
         .toArray((err, data) => {
             if (err) {
                 console.log(err);
-                res.end("something went wrong");
+                // res.end("something went wrong");
             } else {
+                console.log(data);
                 res.render("reja", { items: data });
             }
         });
     });
     
-    module.exports = app; 
+    module.exports = app;  
