@@ -1,6 +1,5 @@
 console.log("Web Serverni boshlash");
 const express = require("express");
-// const res = require("express/lib/response");
 const app = express();
 
 //MongoDB chaqirish
