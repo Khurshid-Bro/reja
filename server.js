@@ -4,7 +4,7 @@ const mongodb = require("mongodb");
 // npm i mongodb - mongodbni yuklash
 // let db;
 const connectionString = 
-"mongodb+srv://razakovkh6774:6ClG8vYh4Du1mMyO@cluster0.48p1o.mongodb.net/Reja";
+"mongodb+srv://razakovkh6774:6ClG8vYh4Du1mMyO@cluster0.48p1o.mongodb.net/reja";
 
 mongodb.connect(
     connectionString, 
@@ -20,7 +20,7 @@ mongodb.connect(
 
             const app = require("./app");
             const server = http.createServer(app);
-            let PORT = 3000;
+            let PORT = 3001;
             server.listen(PORT, function () {
                 console.log(
                     `The server is running successfully on port: ${PORT}, http://localhost:${PORT}`
