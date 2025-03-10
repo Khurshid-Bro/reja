@@ -1,6 +1,6 @@
 console.log("Web Serverni boshlash");
 const express = require("express");
-// const res = require("express/lib/response");
+const res = require("express/lib/response");
 const app = express();
 
 //MongoDB chaqirish
@@ -67,7 +67,7 @@ app.post("/delete-item", (req, res) => {
         .toArray((err, data) => {
             if (err) {
                 console.log(err);
-                // res.end("something went wrong");
+                res.end("something went wrong");
             } else {
                 console.log(data);
                 res.render("reja", { items: data });

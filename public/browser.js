@@ -22,7 +22,7 @@ function itemTemplate(item) {
 let createField = document.getElementById("create-field");
 
 document.getElementById("create-form").addEventListener("submit", function (event) {
-    e.preventDefault(); //STOP Traditional API
+    event.preventDefault(); //STOP Traditional API
 
     //Rest API
     axios
