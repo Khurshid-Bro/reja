@@ -321,3 +321,14 @@ function checkContent(str1, str2) {
 console.log(checkContent("ajoyib", "ibjoya"));
 console.log(checkContent("ajoyib", "kun"));
 
+function checkContent(str1, str2) {
+    if(str1.length !== str2.length) {
+        return false;
+    }
+    const normalize = str => str.split('').sort().join('');
+    return normalize(str1) === normalize(str2);
+}
+
+console.log(checkContent("ajoyib", "ibjoya"));
+console.log(checkContent("ajoyib", "kun"));
+
