@@ -257,7 +257,7 @@ MITASK-C
 Shunday class tuzing tuzing nomi Shop, va uni constructoriga 3 hil mahsulot pass bolsin, hamda classning 3ta methodi bolsin, biri qoldiq, biri sotish va biri qabul. Har bir method ishga tushgan vaqt ham log qilinsin.
 MASALAN: const shop = new Shop(4, 5, 2); shop.qoldiq() return hozir 20:40da 4ta non, 5ta lagmon va 2ta cola mavjud! shop.sotish('non', 3) & shop.qabul('cola', 4) & shop.qoldiq() return hozir 20:50da 1ta non, 5ta lagmon va 6ta cola mavjud!
 
- */
+*/
 
 class Shop {
     constructor(non, choy, suv) {
@@ -265,48 +265,47 @@ class Shop {
         this.choy = choy;
         this.suv = suv;
     }
-
+    
     qoldiq() {
         const vaqt = new Date().toLocaleTimeString();
         console.log(
             `${vaqt} da sizda hozir ${this.non} ta non, ${this.choy} ta choy, ${this.suv} ta suv bor.`
-        );
-    }
-
-    sotish(nomi, miqdor) {
-        const vaqt = new Date().toLocaleTimeString();
-
-        if (this[nomi] === undefined) {
-            console.log(`${vaqt} da bunday mahsulot yo'q.`);
-        } else if (this[nomi] < miqdor) {
-            console.log(
-                `${vaqt} da sizda ${miqdor} ta ${nomi} mahsulot yo'q, faqat ${this[nomi]} ta ${nomi} mavjud.`
             );
-        } else {
-            this[nomi] -= miqdor;
-            console.log(`${vaqt} da ${miqdor} ta ${nomi} sotildi.`);
         }
-    }
-
-    qabul(nomi, miqdor) {
-        const vaqt = new Date().toLocaleTimeString();
-        if (this[nomi] === undefined) {
-            console.log(`${vaqt} da bunday mahsulot yo'q.`);
-        } else {
-            this[nomi] += miqdor;
-            console.log(`${vaqt} da siz ${miqdor} ta ${nomi} qabul qildingiz.`);
+        
+        sotish(nomi, miqdor) {
+            const vaqt = new Date().toLocaleTimeString();
+            
+            if (this[nomi] === undefined) {
+                console.log(`${vaqt} da bunday mahsulot yo'q.`);
+            } else if (this[nomi] < miqdor) {
+                console.log(
+                    `${vaqt} da sizda ${miqdor} ta ${nomi} mahsulot yo'q, faqat ${this[nomi]} ta ${nomi} mavjud.`
+                    );
+                } else {
+                    this[nomi] -= miqdor;
+                    console.log(`${vaqt} da ${miqdor} ta ${nomi} sotildi.`);
+                }
+            }
+            
+            qabul(nomi, miqdor) {
+                const vaqt = new Date().toLocaleTimeString();
+                if (this[nomi] === undefined) {
+                    console.log(`${vaqt} da bunday mahsulot yo'q.`);
+                } else {
+                    this[nomi] += miqdor;
+                    console.log(`${vaqt} da siz ${miqdor} ta ${nomi} qabul qildingiz.`);
+                }
+            }
         }
-    }
-}
-
-const shop = new Shop(4, 5, 2);
-shop.qoldiq();
-shop.sotish('non', 3);
-shop.qabul('suv', 1);
-shop.qoldiq();
+        
+        const shop = new Shop(4, 5, 2);
+        shop.qoldiq();
+        shop.sotish('non', 3);
+        shop.qabul('suv', 1);
+        shop.qoldiq();
 
 // D-TASK: 
-
 /* Shunday function tuzing, u 2ta string parametr ega bolsin, hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
 MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true; */
 
@@ -318,17 +317,46 @@ function checkContent(str1, str2) {
     return normalize(str1) === normalize(str2);
 }
 
-console.log(checkContent("ajoyib", "ibjoya"));
-console.log(checkContent("ajoyib", "kun"));
+// E-TASK: 
 
-function checkContent(str1, str2) {
-    if(str1.length !== str2.length) {
-        return false;
-    }
-    const normalize = str => str.split('').sort().join('');
-    return normalize(str1) === normalize(str2);
+// Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
+// MASALAN: getReverse("hello") return qilsin "olleh"
+
+function getReverse(str) {
+    return str.split('').reverse().join('');
 }
 
-console.log(checkContent("ajoyib", "ibjoya"));
-console.log(checkContent("ajoyib", "kun"));
+console.log(getReverse("hello word"));
+
+// TASK F
+
+// Yagona string argumentga ega findDoublers nomli function tuzing
+// Agar stringda bittadan ortiq bir xil harflar ishtirok etgan bo'lsa
+// true yokida false natija qaytarsin.
+
+// MASALAN: findDoublers("hello"); natija true qaytadi. Sababi ikki marotaba takrorlangan 'll' harfi mavjud!
+
+//a
+
+function findDoublers(str) {
+    const charSet = new Set();
+    for (const char of str) {
+        if (charSet.has(char)) {
+            return true;
+        }
+        charSet.add(char);
+    }
+    return false;
+}
+
+console.log(findDoublers("hello"));
+console.log(findDoublers("world"));
+
+//b
+function findDoublers(str) {
+    return str.split("").some((dan, i, arr) => dan === arr[i + 1]);
+}
+
+console.log(findDoublers("hello"));
+console.log(findDoublers("world"));
 
